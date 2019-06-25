@@ -1,0 +1,39 @@
+﻿<br />
+<h1> Editar</h1>
+
+
+<form action="/Promocion/Actualizar?IdPromocion=@Model.IdPromocion" method="post">
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+    </div>
+    <br />
+
+    <div>
+        <label>Descripcion</label>
+        <input name="Descripcion" value="@Model.Descripcion" />
+    </div>
+    <br />
+
+    <div>
+        <label>Fecha Inicio</label>
+        <input name="FechaInicio" value="@Model.FechaInicio" type="date" />
+    </div>
+    <br />
+
+    <div>
+        <label>Fecha Fin</label>
+        <input name="FechaFin" value="@Model.FechaFin" type="date" />
+    </div>
+    <br />
+
+    <div>
+        <label>Guia Turistico</label>
+        @Html.DropDownList("IdGuiaTuristico", new SelectList(ViewBag.GuiaTuristicos,
+        "IdGuiaTuristico", "Nombre"), "Elegir Guia", new { @class = "form-control" })
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

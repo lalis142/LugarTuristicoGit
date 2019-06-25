@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>LogIn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      
+    <link href="~/Content/estilos.css" rel="stylesheet" />
+</head>
+<body class="cover" style="background-image: url(/Imagen/fondo-reg2.jpg);">
+    <br />
+    <br />
+    <p class="text-center text-muted"><i class="zmdi zmdi-account-circle zmdi-hc-5x"></i></p>
+    <p class="text-center text-muted text-uppercase">REGISTRO TOURS CENTER </p>
+            
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <article class="card-body">
+
+                    <form form method="post" action="/Login/Guardar">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-row">
+                            <div class="form-group col-md-6" method="post" action="/usuario/login">
+                                <label>Nombres</label>
+                                <input type="text" name="Nombre" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                                @Html.ValidationMessage("Nombre")
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label>Apellidos</label>
+                                <input type="text" name="ApellidoPaterno" class="form-control" id="exampleInputEmail1" placeholder="Apellido">
+                                @Html.ValidationMessage("Apellido")
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>DNI</label>
+                                <input type="text" name="Dni" class="form-control" id="exampleInputEmail1" placeholder="DNI">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label>Fecha Nacimiento</label>
+                                <input type="date" name="FechaNacimiento" class="form-control" id="exampleInputEmail1" placeholder="Fecha Nacimiento">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Correo</label>
+                                <input type="email" name="Correo" class="form-control" id="exampleInputEmail1" placeholder="Correo">
+                            </div>
+                                                        
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Name</label>
+                                <input type="text" name="UsuarioName" class="form-control" placeholder="Nombre de Usuario">
+                                @Html.ValidationMessage("UsuarioName")
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label>Password</label>
+                                <input type="password" name="Password" class="form-control" placeholder="Password">
+                                @Html.ValidationMessage("Password")
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                          
+                          <a type="submit" class="btn btn-raised btn-success" href="/Login/Login">Regresar</a>
+                          <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+                          
+                        </div> 
+
+                    </form>
+</article>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-6">
+        <div class="card">
+            <article class="card-body">
+                <div class="slider">
+                    <ul>
+                        <li><img src="~/Imagen/1-cajamarca.jpg"></li>
+                        <li><img src="~/Imagen/leyendas-de-Cajamarca.jpg" /></li>
+                        <li><img src="~/Imagen/los-banos-del-inca-3787.jpg" /></li>
+                        <li><img src="~/Imagen/otuzco.jpg" /></li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</div>
+   
+</body>
+</html>
+
+
+

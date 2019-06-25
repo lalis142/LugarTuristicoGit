@@ -1,0 +1,36 @@
+﻿
+<h2>FormEditar</h2>
+
+<form action="/GuiaTuristico/Actualizar?IdGuiaTuristico=@Model.IdGuiaTuristico" method="post">
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+    </div>
+    <br />
+
+    <div>
+        <label>Apellido</label>
+        <input name="Apellido" value="@Model.Apellido" />
+    </div>
+    <br />
+
+    <div>
+        <label>NumTelefono</label>
+        <input name="NumTelefono" value="@Model.NumTelefono" />
+    </div>
+    <br />
+
+    <div>
+        <label>Descripción</label>
+        <input name="Descripcion" value="@Model.Descripcion" />
+    </div>
+    <br />
+    <div>
+        <label>Horario</label>
+        <input name="Horario" value="@Model.Horario" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

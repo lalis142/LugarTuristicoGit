@@ -1,0 +1,46 @@
+﻿<br />
+<h1> Editar</h1>
+
+
+<form action="/VentaEntrada/Actualizar?Id=@Model.Id" method="post">
+    <div>
+        <label>Cantidad Niños</label>
+        <input name="CantidadEntraNino" value="@Model.CantidadEntraNino" />
+    </div>
+    <br />
+
+    <div>
+        <label>Cantidad Adulto</label>
+        <input name="CantidadEntraAdulto" value="@Model.CantidadEntraAdulto" />
+    </div>
+    <br />
+
+    <div>
+        <label>Lugar Turistico</label>
+        @Html.DropDownList("LugarId", new SelectList(ViewBag.LugarTuristicos,
+        "IdLugarTuristico", "Nombre"), "Elegir Lugar Turistico", new { @class = "form-control" })
+    </div>
+    <br />
+
+    <div>
+        <label>Usuario</label>
+        @Html.DropDownList("UsuarioId", new SelectList(ViewBag.Usuarios,
+        "Id", "Nombre"), "Elegir Lugar Usuario", new { @class = "form-control" })
+    </div>
+    <br />
+
+    <div>
+        <label>Fecha Visita</label>
+        <input name="FechaVisita" value="@Model.FechaVisita" />
+    </div>
+    <br />
+
+    <div>
+        <label>Precio Total</label>
+        <input name="PrecioTotal" value="@Model.PrecioTotal" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

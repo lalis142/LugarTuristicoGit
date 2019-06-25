@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<table WIDTH="40%" align="center">
+    <tbody>
+        @foreach (var lugar in Model)
+        {
+            <tr>
+                <td>
+                    <div align="center">
+                        <h2><font face="Comic Sans MS,arial,verdana">@lugar.Nombre</font></h2>
+                    </div>
+                    <div align="center" class="div-imagen">
+                        <div>
+                            <h4><font face="Verdana, Arial, Helvetica, sans-serif">@lugar.Descripcion</font></h4>
+                        </div>
+
+                        <img class="desvanecer" src=@lugar.Imagen width="300" height="300" />
+                    </div>
+                </td>
+
+                <td>
+                    <div align="center">
+                            <h3><font face="Verdana, Arial, Helvetica, sans-serif">Precios: </font></h3>
+                            <h4><font face="Verdana, Arial, Helvetica, sans-serif">Adulto: @lugar.PrecioAdulto</font></h4>
+                            <h4><font face="Verdana, Arial, Helvetica, sans-serif">Niño: @lugar.PrecioNino</font></h4>
+                    </div>
+                    <br />
+
+                    <div align="center">
+                        <a id="idComprar" href="@Url.Action("FormGuardar", "VentaEntrada")" class="btn btn-primary">Comprar Entrada </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<link href="~/css/ocultarImagen.css" rel="stylesheet" />
+
